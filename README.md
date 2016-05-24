@@ -2,19 +2,21 @@
 
 Türkiye Cumhuriyeti Merkez Bankası sitesinden XML olarak verileri alarak kullanmanızı sağlayacak Python kodu (nesnesi)'dir. 
 
-Sayfa : www.tcmb.gov.tr -  http://www.tcmb.gov.tr/kurlar/today.xml
+Bilginin Alındığı Sayfa : www.tcmb.gov.tr -  http://www.tcmb.gov.tr/kurlar/today.xml
+
 
 Kullanımı :
+--------------------------
 
 DovizKurlari.py dosyasını kodunuzun olduğu dizine ekleyin. 
 
-Nesne'yi yarattıktan sonra DegerSor fonksiyonu ile değer alabilirsiniz. DegerSor fonksiyonu iki parametre alır. 
+Nesne'yi yarattıktan sonra DegerSor fonksiyonu ile değer alabilirsiniz. "DegerSor" fonksiyonu iki parametre alır. 
 
-DegerSor (parametre1, parametre2) 
+<b>DegerSor (Parametre1, Parametre2) </b>
 
-Parametre1 = USD, EUR, AUD gibi para cinsinin resmi kısaltmaları 
-parametre2 = Almak istediğiniz değer 
-[Kod,isim,CurrencyName,Unit,ForexBuying,ForexSelling,BanknoteBuying,BanknoteSelling,CrossRateUSD]
+<b>Parametre1 = USD, EUR, AUD gibi para cinsinin resmi kısaltmaları 
+<b>Parametre2 = Almak istediğiniz değer ;
+
       0 : Kod kısaltmasını verir. 
       1 : Türkçe tanım . "ABD DOLARI" gibi. 
       2 : Yabancı tanım = CurrencyName 
@@ -29,14 +31,11 @@ parametre2 = Almak istediğiniz değer
 Ornek Python Kodu :  
 ---------------------------------------------
 
+<code>
 from DovizKur import DovizKurlari
-
 ornek = DovizKurlari()
-
 print ornek.DegerSor("EUR",4)
-
 Dolar_Deger = ornek.DegerSor("USD",4)
-
 print Dolar_Deger
-
+</code>
 ----------------------------------------------
