@@ -8,7 +8,7 @@ Bilginin Alındığı Sayfa : www.tcmb.gov.tr -  http://www.tcmb.gov.tr/kurlar/t
 Kullanımı :
 --------------------------
 
-Öncelikle DovizKurlari.py dosyasını kodunuzun olduğu dizine ekleyin ve git clone ile direk sistemden çekin
+sistemden zip'li olarak çekin veya "git clone" ile direk sistemden clone yapın. 
 
 <i><b>git clone https://github.com/tayfunulu/DovizKurlari.git</b>
 
@@ -19,6 +19,7 @@ python ornek.py</i>
 veya 
 
 <i>python3 ornek.py</i>
+
 
 Kendi kodunuzda kullanmak için DovizKurlari.py dosyasını kendi projenizin klasörünüze taşıyın. Sonrasında DovizKurları Nesnesi yaratarak, DegerSor fonksiyonu ile istediğiniz değeri sistemden çekebilirsiniz. "DegerSor" fonksiyonu iki parametre alır. 
 
