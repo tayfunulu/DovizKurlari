@@ -2,7 +2,7 @@
 # -*- coding:utf-8 -*-
 import xml.etree.ElementTree as ET
 import sys
-if sys.version_info_major >2 :
+if sys.version_info.major >2 :
     from urllib.request import urlopen
 else : 
     import urllib2
@@ -13,7 +13,7 @@ class DovizKurlari():
         self.__veri_update()
 
     def __veri_update(self):
-        if sys.version_info_major >2 :
+        if sys.version_info.major >2 :
             tree = ET.parse(urlopen('http://www.tcmb.gov.tr/kurlar/today.xml'))
         else :
             tree = ET.parse(urllib2.urlopen('http://www.tcmb.gov.tr/kurlar/today.xml'))
