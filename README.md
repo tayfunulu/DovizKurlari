@@ -8,7 +8,9 @@ Bilginin Alındığı Sayfa : www.tcmb.gov.tr -  http://www.tcmb.gov.tr/kurlar/t
 Kullanımı :
 --------------------------
 
-DovizKurlari.py dosyasını kodunuzun olduğu dizine ekleyin. 
+Öncelikle DovizKurlari.py dosyasını kodunuzun olduğu dizine ekleyin ve git clone ile direk sistemden çekin
+
+<b>git clone https://github.com/tayfunulu/DovizKurlari.git</b>
 
 Nesne'yi yarattıktan sonra DegerSor fonksiyonu ile değer alabilirsiniz. "DegerSor" fonksiyonu iki parametre alır. 
 
