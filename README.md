@@ -15,6 +15,7 @@ Nesne'yi yarattıktan sonra DegerSor fonksiyonu ile değer alabilirsiniz. "Deger
 <b>DegerSor (<i>Parametre1, Parametre2</i>) </b>
 
 <b>Parametre1 </b> = USD, EUR, AUD gibi para cinsinin resmi kısaltmaları 
+
 <b>Parametre2 </b>= Almak istediğiniz değer ;
 
       0 : Kod kısaltmasını verir. 
@@ -32,10 +33,15 @@ Ornek Python Kodu :
 ---------------------------------------------
 
 <code>
-from DovizKur import DovizKurlari<br>
-ornek = DovizKurlari()<br>
-print ornek.DegerSor("EUR",4)<br>
-Dolar_Deger = ornek.DegerSor("USD",4)<br>
-print Dolar_Deger<br>
+from DovizKur import DovizKurlari
+
+ornek = DovizKurlari()
+
+print ornek.DegerSor("EUR",4)
+
+Dolar_Deger = ornek.DegerSor("USD",4)
+
+print Dolar_Deger
+
 </code>
 ----------------------------------------------
