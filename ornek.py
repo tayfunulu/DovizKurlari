@@ -1,5 +1,5 @@
-from DovizKur import DovizKurlari
+from DovizKurlari import DovizKurlari
 ornek = DovizKurlari()
-print "EURO DEGERİ="+ornek.DegerSor("EUR",4)
+print "EURO DEGERI="+ornek.DegerSor("EUR",4)
 Dolar_Deger = ornek.DegerSor("USD",4)
-print "DOLAR DEGERİ="+Dolar_Deger
+print "DOLAR DEGERI="+Dolar_Deger
