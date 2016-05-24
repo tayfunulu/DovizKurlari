@@ -10,7 +10,15 @@ Kullanımı :
 
 Öncelikle DovizKurlari.py dosyasını kodunuzun olduğu dizine ekleyin ve git clone ile direk sistemden çekin
 
-<b>git clone https://github.com/tayfunulu/DovizKurlari.git</b>
+<i><b>git clone https://github.com/tayfunulu/DovizKurlari.git</b>
+
+cd DovizKurlari 
+
+python ornek.py</i>
+
+veya 
+
+<i>python3 ornek.py</i>
 
 Nesne'yi yarattıktan sonra DegerSor fonksiyonu ile değer alabilirsiniz. "DegerSor" fonksiyonu iki parametre alır. 
 
