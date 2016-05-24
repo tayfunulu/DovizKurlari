@@ -31,8 +31,6 @@ Nesne'yi yarattıktan sonra DegerSor fonksiyonu ile değer alabilirsiniz. "Deger
 
 Ornek Python Kodu :  
 ---------------------------------------------
-
-<code>
 from DovizKur import DovizKurlari
 
 ornek = DovizKurlari()
@@ -42,6 +40,4 @@ print ornek.DegerSor("EUR",4)
 Dolar_Deger = ornek.DegerSor("USD",4)
 
 print Dolar_Deger
-
-</code>
 ----------------------------------------------
