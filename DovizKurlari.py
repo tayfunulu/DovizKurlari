@@ -30,8 +30,7 @@ class DovizKurlari():
     def DegerSor (self,sor,sor2):
             return self.son[sor][sor2]
 
-# Ornek Kullan?m i�in
-#from DovizKur import DovizKur
+#Ornek Kullanım için
+#from DovizKur import DovizKurlari
 #ornek = DovizKur()
-#print dir(ornek)
 #print ornek.DegerSor("EUR",3)
