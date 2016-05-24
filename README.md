@@ -14,9 +14,9 @@ Nesne'yi yarattıktan sonra DegerSor fonksiyonu ile değer alabilirsiniz. "Deger
 
 <b>DegerSor (<i>Parametre1, Parametre2</i>) </b>
 
-<b>Parametre1 </b> = USD, EUR, AUD gibi para cinsinin resmi kısaltmaları 
+<b> Parametre1 </b> = USD, EUR, AUD gibi para cinsinin resmi kısaltmaları 
 
-<b>Parametre2 </b>= Almak istediğiniz değer ;
+<b> Parametre2 </b>= Almak istediğiniz değer ;
 
       0 : Kod kısaltmasını verir. 
       1 : Türkçe tanım . "ABD DOLARI" gibi. 
