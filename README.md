@@ -12,10 +12,10 @@ DovizKurlari.py dosyasını kodunuzun olduğu dizine ekleyin.
 
 Nesne'yi yarattıktan sonra DegerSor fonksiyonu ile değer alabilirsiniz. "DegerSor" fonksiyonu iki parametre alır. 
 
-<b>DegerSor (Parametre1, Parametre2) </b>
+<b>DegerSor (<i>Parametre1, Parametre2</i>) </b>
 
-<b>Parametre1 = USD, EUR, AUD gibi para cinsinin resmi kısaltmaları 
-<b>Parametre2 = Almak istediğiniz değer ;
+<b>Parametre1 </b> = USD, EUR, AUD gibi para cinsinin resmi kısaltmaları 
+<b>Parametre2 </b>= Almak istediğiniz değer ;
 
       0 : Kod kısaltmasını verir. 
       1 : Türkçe tanım . "ABD DOLARI" gibi. 
@@ -32,10 +32,10 @@ Ornek Python Kodu :
 ---------------------------------------------
 
 <code>
-from DovizKur import DovizKurlari
-ornek = DovizKurlari()
-print ornek.DegerSor("EUR",4)
-Dolar_Deger = ornek.DegerSor("USD",4)
-print Dolar_Deger
+from DovizKur import DovizKurlari<br>
+ornek = DovizKurlari()<br>
+print ornek.DegerSor("EUR",4)<br>
+Dolar_Deger = ornek.DegerSor("USD",4)<br>
+print Dolar_Deger<br>
 </code>
 ----------------------------------------------
