@@ -40,4 +40,3 @@ print ornek.DegerSor("EUR",4)
 Dolar_Deger = ornek.DegerSor("USD",4)
 
 print Dolar_Deger
-----------------------------------------------
