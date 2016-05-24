@@ -33,4 +33,4 @@ class DovizKurlari():
 #Ornek Kullanım için
 #from DovizKur import DovizKurlari
 #ornek = DovizKur()
-#print ornek.DegerSor("EUR",3)
+#print ornek.DegerSor("EUR",4)
