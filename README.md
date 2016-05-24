@@ -20,7 +20,7 @@ veya
 
 <i>python3 ornek.py</i>
 
-Nesne'yi yarattıktan sonra DegerSor fonksiyonu ile değer alabilirsiniz. "DegerSor" fonksiyonu iki parametre alır. 
+Kendi kodunuzda kullanmak için DovizKurlari.py dosyasını kendi projenizin klasörünüze taşıyın. Sonrasında DovizKurları Nesnesi yaratarak, DegerSor fonksiyonu ile istediğiniz değeri sistemden çekebilirsiniz. "DegerSor" fonksiyonu iki parametre alır. 
 
 <b>DegerSor (<i>Parametre1, Parametre2</i>) </b>
 
