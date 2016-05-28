@@ -42,7 +42,7 @@ Kendi kodunuzda kullanmak için DovizKurlari.py dosyasını kendi projenizin kla
 
 Ornek Python Kodu :  
 ---------------------------------------------
-from DovizKur import DovizKurlari
+from DovizKurlari import DovizKurlari
 
 ornek = DovizKurlari()
 
