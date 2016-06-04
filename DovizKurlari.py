@@ -1,5 +1,8 @@
 #!/usr/bin/python
 # -*- coding:utf-8 -*-
+# Tayfun ULU
+# 2016
+
 import xml.etree.ElementTree as ET
 import sys
 if sys.version_info.major >2 :
