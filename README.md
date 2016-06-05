@@ -38,7 +38,14 @@ Kendi kodunuzda kullanmak için DovizKurlari.py dosyasını kendi projenizin kla
       6 : Efektif Alış Değeri = Banknote Buying
       7 : Efektif Satış Değeri = Banknote Selling 
       8 : Dolar ile çapraz parite 
-      
+
+<b>Arşivden veri çekmek </b>
+
+Eski bir tarihteki kur'u ögrenmek için Arsiv veya Arsiv_Tarih fonksiyonlarını kullanabilirsiniz.
+<b>Arsiv (<i>Parametre1, Parametre2, Gun, Ay, Yil</i>) </b>
+<b>Arsiv_Tarih (<i>Parametre1, Parametre2, Tarih</i>) </b>
+
+Tarih = "01.02.2015" Şeklinde bir string veri olmalıdır. 
 
 Ornek Python Kodu :  
 ---------------------------------------------
