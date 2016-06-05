@@ -53,6 +53,14 @@ class DovizKurlari():
 		self.__veri_update(self.__Url_Yap(Gun,Ay,Yil))
 		return self.son[sor][sor2]
 
+	def Arsiv_tarih (self,sor,sor2,Tarih):
+		takvim = Tarih.split(".")
+		Gun = takvim[0]
+		Ay = takvim[1]
+		Yil = takvim[2]
+		self.__veri_update(self.__Url_Yap(Gun,Ay,Yil))
+		return self.son[sor][sor2]
+
 	def __Url_Yap (self,Gun,Ay,Yil):
 		if len (str(Gun)) == 1 :
 			Gun="0"+str(Gun)
