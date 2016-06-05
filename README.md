@@ -42,7 +42,12 @@ Kendi kodunuzda kullanmak için DovizKurlari.py dosyasını kendi projenizin kla
 <b>Arşivden veri çekmek </b>
 
 Eski bir tarihteki kur'u ögrenmek için Arsiv veya Arsiv_Tarih fonksiyonlarını kullanabilirsiniz.
+
 <b>Arsiv (<i>Parametre1, Parametre2, Gun, Ay, Yil</i>) </b>
+
+Gun, Ay, Yil = integer veya string olabilir. 
+
+
 <b>Arsiv_Tarih (<i>Parametre1, Parametre2, Tarih</i>) </b>
 
 Tarih = "01.02.2015" Şeklinde bir string veri olmalıdır. 
