@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 from DovizKurlari import DovizKurlari
 # ornek isimli nesne yaratiliyor. 
 ornek = DovizKurlari()
