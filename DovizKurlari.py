@@ -44,7 +44,7 @@ class DovizKurlari():
 				BanknoteSelling = kurlars.find('BanknoteSelling').text #    <BanknoteSelling>2.9684</BanknoteSelling>
 				CrossRateUSD = kurlars.find('CrossRateUSD').text #    <CrossRateUSD>1</CrossRateUSD>
 				self.Kur_Liste.append(Kod)
-				self.son [Kod] = [Kod,isim,CurrencyName,ForexBuying,ForexSelling,BanknoteBuying,BanknoteSelling,CrossRateUSD]
+				self.son [Kod] = [Kod,isim,CurrencyName,Unit,ForexBuying,ForexSelling,BanknoteBuying,BanknoteSelling,CrossRateUSD]
 
 			return self.son
 
