@@ -132,7 +132,7 @@ Tarih = "01.02.2015" Şeklinde bir string veri olmalıdır.
 
 <hr>
 
-<h1> Local'de çalıştırılması. </h1>
+<h1> Local'de Microservis olarak çalıştırılması. </h1>
 
 <code> python3 flask_doviz_server.py</code>
 
