@@ -4,8 +4,75 @@ Türkiye Cumhuriyeti Merkez Bankası sitesinden XML olarak verileri alarak kulla
 
 Bilginin Alındığı Sayfa : www.tcmb.gov.tr -  http://www.tcmb.gov.tr/kurlar/today.xml
 
+<hr>
 
-Kullanımı :
+<h1>Docker ile Kullanımı:</h1>
+
+öncelikle docker hub'dan ilgili container image :
+
+<code>docker pull tayfunulu/tl_doviz_kurlari</code>
+
+Çalıştırma (arka ekranda çalıştırma)
+
+<code>docker run --rm -it -d -p 5000:5000 tayfunulu/tl_doviz_kurlari</code>
+
+--------------------------
+
+Çalışıp çalışmadığını test edelim.
+
+http://makinenin_ipsi:5000/api/doviz
+
+<i>örnek</i>
+
+http://127.0.0.1:5000/api/doviz
+
+Çalışıyorsa aşağıdaki metotları kullanabilirsiniz.
+
+<hr>
+
+# RESTFULL-API KULLANIMI
+
+<h2><b>/api/doviz</b></h2>
+
+GET -> Güncel kur bilgilerinin tamamını verir. 
+
+POST -> JSON ile tarih bilgisi gönderirseniz "gun.ay.yil" formatında "01.04.2020" ilgili günün tüm kurlarını verir. Hangi kuru istediğinizi eklerseniz sadece o kurun bilgileri gelir. 
+
+            {"tarih":"01.04.2020"}  
+            {"tarih":"01.04.2020","tur":"EUR"}  
+
+
+<h2><b>/api/doviz/_TUR_</b></h2>
+
+<i>örnek : /api/Doviz/USD</i> 
+
+GET -> Seçilen Kur türünün tüm bilgilerini verir. 
+
+POST -> Seçilen Kur türünün arşiv verisini almak için
+    
+            {"tarih":"01.04.2020"}  
+
+<h2><b>/api/doviz/_yil/ay/gun_</b></h2>
+
+<i>örnek : /api/doviz/2020/02/08</i>
+
+GET -> Arşivden ilgili günün tüm kur bilgilerini verir. 
+
+<h2><b>/api/doviz/_yil/ay/gun/TUR_</b></h2>
+
+<i>örnek : /api/doviz/2020/02/010/USD</i>
+
+GET -> Arşivden ilgili günün seçilen kur bilgilerini verir.             
+
+<hr>
+
+<b> Not : </b> Arşiv özelliğinde tatil günleri için Tatil günü olduğunu belirten bir hata döner
+
+
+<hr>
+
+
+<h1>Kendi Kodunuzda Nesne olarak Kullanımı :</h1>
 --------------------------
 
 sistemden zip'li olarak çekin veya "git clone" ile direk sistemden clone yapın. 
@@ -14,30 +81,28 @@ sistemden zip'li olarak çekin veya "git clone" ile direk sistemden clone yapın
 
 cd DovizKurlari 
 
-python ornek.py</i>
-
-veya 
-
 <i>python3 ornek.py</i>
 
 
 Kendi kodunuzda kullanmak için DovizKurlari.py dosyasını kendi projenizin klasörünüze taşıyın. Sonrasında DovizKurları Nesnesi yaratarak, DegerSor fonksiyonu ile istediğiniz değeri sistemden çekebilirsiniz. "DegerSor" fonksiyonu iki parametre alır. 
 
-<b>DegerSor (<i>Parametre1, Parametre2</i>) </b>
+<code><b>DegerSor (<i>Parametre1, Parametre2</i>) </b></code>
+
+<b>*</b> Parametre verilmezse JSON olarak tüm veriler döner 
 
 <b> Parametre1 </b> = USD, EUR, AUD gibi para cinsinin resmi kısaltmaları 
 
 <b> Parametre2 </b>= Almak istediğiniz değer ;
 
-      0 : Kod kısaltmasını verir. 
-      1 : Türkçe tanım . "ABD DOLARI" gibi. 
-      2 : Yabancı tanım = CurrencyName 
-      3 : Birim değeri = Genelde 1 olur. Bazı para cinsleri için 100'dür. 
-      4 : Döviz Alış Değeri = Forex Buying 
-      5 : Döviz Satış Değeri = Forex Selling
-      6 : Efektif Alış Değeri = Banknote Buying
-      7 : Efektif Satış Değeri = Banknote Selling 
-      8 : Dolar ile çapraz parite 
+    "BanknoteBuying"    : Alış Değeri
+    "BanknoteSelling"   : Satış Değeri
+    "CrossRateUSD"      : USD ile çapraz kur
+    "CurrencyName"      : Resmi Adı
+    "ForexBuying"       : Forex Alış     
+    "ForexSelling"      : Forex Satış
+    "Kod"               : Kodu 
+    "Unit"              : 1
+    "isim"              : Türkçe Adı     
 
 <b>Arşivden veri çekmek </b>
 
@@ -51,3 +116,11 @@ Gun, Ay, Yil = integer veya string olabilir.
 <b>Arsiv_Tarih (<i>Tarih,Parametre1, Parametre2</i>) </b>
 
 Tarih = "01.02.2015" Şeklinde bir string veri olmalıdır. 
+
+<hr>
+
+<h1> Local'de çalıştırılması. <h1>
+
+<code> python3 flask_doviz_server.py</code>
+
+Sonrasında 5000 portu dinlemeye başlar. Kullanımı yukarıda anlatıldığı gibidir. 
