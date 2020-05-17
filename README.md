@@ -1,3 +1,9 @@
+# Güncellenmiyor 
+<h3> microservice branch'ına bakın.  <br> 
+ Python2 ile kullanmak isteyen olursa diye bunu master olarak bıraktım.</h3>
+
+<hr>
+
 # Doviz Kurlari
 
 Türkiye Cumhuriyeti Merkez Bankası sitesinden XML olarak verileri alarak kullanmanızı sağlayacak Python kodu (nesnesi)'dir. 
