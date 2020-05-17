@@ -1,0 +1,9 @@
+version: '3'
+services:
+  doviz_microservis:
+    container_name: tl_doviz_kurlari
+    image: tayfunulu/tl_doviz_kurlari
+    restart: always
+    ports:
+      - "5000:5000"  
+  
