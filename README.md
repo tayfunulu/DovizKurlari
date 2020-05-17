@@ -1,4 +1,4 @@
-# Doviz Kurlari 
+# Doviz Kurlari Api Rest - Microservis - Docker
 
 Türkiye Cumhuriyeti Merkez Bankası sitesinden XML olarak verileri alarak kullanmanızı sağlayacak Python kodu (nesnesi)'dir. 
 
