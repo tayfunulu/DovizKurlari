@@ -2,18 +2,17 @@
 # -*- coding:utf-8 -*-
 # Tayfun ULU
 # 2016
+# 2020 - Flask ile restful-api ekleme ve sadece python3'e dondurme
 
+from flask import Flask, make_response, jsonify, request
 import xml.etree.ElementTree as ET
 import sys
-if sys.version_info.major >2 :
-	from urllib.request import urlopen
-else :
-	import urllib2
+from urllib.request import urlopen
 
 class DovizKurlari():
 
 	def __init__(self):
-        	pass
+		pass
 
 	def __veri_update(self,zaman="Bugun"):
 		try :
@@ -23,16 +22,12 @@ class DovizKurlari():
 			else:
 				self.url=zaman
 
-			if sys.version_info.major >2 :
-				tree = ET.parse(urlopen(self.url))
-			else :
-				tree = ET.parse(urllib2.urlopen(self.url))
-
-
+			tree = ET.parse(urlopen(self.url))
+			
 			root = tree.getroot()
 			self.son={}
 			self.Kur_Liste=[]
-
+			i = 0 
 			for kurlars in root.findall('Currency'):
 				Kod= kurlars.get('Kod')
 				Unit = kurlars.find('Unit').text #    <Unit>1</Unit>
@@ -44,8 +39,19 @@ class DovizKurlari():
 				BanknoteSelling = kurlars.find('BanknoteSelling').text #    <BanknoteSelling>2.9684</BanknoteSelling>
 				CrossRateUSD = kurlars.find('CrossRateUSD').text #    <CrossRateUSD>1</CrossRateUSD>
 				self.Kur_Liste.append(Kod)
-				self.son [Kod] = [Kod,isim,CurrencyName,Unit,ForexBuying,ForexSelling,BanknoteBuying,BanknoteSelling,CrossRateUSD]
-
+				#self.son [Kod] = [Kod,isim,CurrencyName,Unit,ForexBuying,ForexSelling,BanknoteBuying,BanknoteSelling,CrossRateUSD]
+				self.son [Kod] = { 
+            "Kod":Kod,
+            "isim":isim,
+            "CurrencyName":CurrencyName,
+            "Unit":Unit,
+            "ForexBuying":ForexBuying,
+            "ForexSelling":ForexSelling,
+            "BanknoteBuying":BanknoteBuying,
+            "BanknoteSelling":BanknoteSelling,
+            "CrossRateUSD":CrossRateUSD
+            }
+          
 			return self.son
 
 		except :
@@ -53,28 +59,40 @@ class DovizKurlari():
 			return "HATA"
 
 
-
-	def DegerSor (self,sor,sor2):
+	def DegerSor (self,*sor):
 		self.__veri_update()
-		return self.son[sor][sor2]
-
-	def Arsiv (self,sor,sor2,Gun,Ay,Yil):
-		a=self.__veri_update(self.__Url_Yap(Gun,Ay,Yil))
-		if a == "HATA":
-			return "TATIL GUNU"
+		if not(any(sor)):
+				return self.son
 		else:
-			return self.son[sor][sor2]
+				return self.son.get(sor[0]).get(sor[1])
 
-	def Arsiv_tarih (self,sor,sor2,Tarih):
+	def Arsiv (self,Gun,Ay,Yil,*sor):
+		a=self.__veri_update(self.__Url_Yap(Gun,Ay,Yil))
+		if not(any(sor)):
+			if a == "HATA":
+				return {"Hata":"TATIL GUNU"}
+			return self.son
+		else :
+			if a == "HATA":
+				return "Tatil Gunu"
+			else:
+				return self.son.get(sor[0]).get(sor[1])
+
+	def Arsiv_tarih (self,Tarih="",*sor):
 		takvim = Tarih.split(".")
 		Gun = takvim[0]
 		Ay = takvim[1]
 		Yil = takvim[2]
 		a=self.__veri_update(self.__Url_Yap(Gun,Ay,Yil))
-		if a == "HATA":
-			return "TATIL GUNU"
+		if not(any(sor)):
+			if a == "HATA":
+				return {"Hata":"TATIL GUNU"}
+			return self.son
 		else :
-			return self.son[sor][sor2]
+			if a == "HATA":
+				return "Tatil Gunu"
+			else:
+				return self.son.get(sor[0]).get(sor[1])
 
 	def __Url_Yap (self,Gun,Ay,Yil):
 		if len (str(Gun)) == 1 :
@@ -86,6 +104,6 @@ class DovizKurlari():
 		return self.url
 
 #Ornek Kullanım için
-#from DovizKur import DovizKurlari
-#ornek = DovizKur()
+#from DovizKurlari import DovizKurlari
+#ornek = DovizKurlari()
 #print ornek.DegerSor("EUR",4)
