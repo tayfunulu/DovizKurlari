@@ -14,11 +14,22 @@ Bilginin Alındığı Sayfa : www.tcmb.gov.tr -  http://www.tcmb.gov.tr/kurlar/t
 
 <code>docker pull tayfunulu/tl_doviz_kurlari</code>
 
-Çalıştırma (arka ekranda çalıştırma)
+Manual Çalıştırma (arka ekranda çalıştırma)
 
 <code>docker run --rm -it -d -p 5000:5000 tayfunulu/tl_doviz_kurlari</code>
 
---------------------------
+<hr>Docker-Compose dosyası 
+
+    version: '3'
+    services:
+      doviz_microservis:
+      container_name: tl_doviz_kurlari
+      image: tayfunulu/tl_doviz_kurlari
+      restart: always
+      ports:
+        - "5000:5000"
+
+<hr>
 
 Çalışıp çalışmadığını test edelim.
 
