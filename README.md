@@ -8,7 +8,7 @@ Bilginin Alındığı Sayfa : www.tcmb.gov.tr -  http://www.tcmb.gov.tr/kurlar/t
 
 <hr>
 
-<b>Örnek olması için Google Cloud'da örnek kod : <7b>
+<b>Örnek olması için Google Cloud'da örnek kod : </b>
 
 https://dovizkurlari-l6vtviaacq-uc.a.run.app/api/doviz/usd
 
