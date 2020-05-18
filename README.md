@@ -8,10 +8,14 @@ Bilginin Alındığı Sayfa : www.tcmb.gov.tr -  http://www.tcmb.gov.tr/kurlar/t
 
 <hr>
 
-örnek 
+<b>Örnek olması için Google Cloud'da örnek kod : <7b>
+
 https://dovizkurlari-l6vtviaacq-uc.a.run.app/api/doviz/usd
+
 https://dovizkurlari-l6vtviaacq-uc.a.run.app/api/doviz/
+
 https://dovizkurlari-l6vtviaacq-uc.a.run.app/api/doviz/2020/04/01
+
 https://dovizkurlari-l6vtviaacq-uc.a.run.app/api/doviz/2020/04/01/eur
 
 <hr>
