@@ -1,9 +1,20 @@
 from flask import Flask, make_response, jsonify, request
 from DovizKurlari import DovizKurlari
+import markdown
+import markdown.extensions.fenced_code
+
 
 kurlar = DovizKurlari()
 
 app = Flask(__name__)
+
+@app.route('/')
+def index():
+   readme_file = open("README.md", "r")
+   md_template_string = markdown.markdown(readme_file.read(), extensions=["fenced_code"])
+   return md_template_string
+
+   
 
 @app.route('/api/doviz', methods=['GET', 'POST'])
 def api_doviz():
