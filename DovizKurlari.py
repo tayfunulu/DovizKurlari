@@ -4,9 +4,7 @@
 # 2016
 # 2020 - Flask ile restful-api ekleme ve sadece python3'e dondurme
 
-from flask import Flask, make_response, jsonify, request
 import xml.etree.ElementTree as ET
-import sys
 from urllib.request import urlopen
 
 class DovizKurlari():
