@@ -55,7 +55,7 @@ http://127.0.0.1:5000/api/doviz
 
 <hr>
 
-# RESTFULL-API KULLANIMI
+# RESTFUL-API KULLANIMI
 
 <h2><b>/api/doviz</b></h2>
 
