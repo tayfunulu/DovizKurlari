@@ -4,7 +4,7 @@ Türkiye Cumhuriyeti Merkez Bankası sitesinden XML olarak verileri alarak kulla
 
 Eğitim ve bilgilendirme amaçlıdır. Ticari bir beklenti yoktur. 
 
-Bilginin Alındığı Sayfa : www.tcmb.gov.tr -  http://www.tcmb.gov.tr/kurlar/today.xml
+Bilginin Alındığı Sayfa : www.tcmb.gov.tr -  https://www.tcmb.gov.tr/kurlar/today.xml
 
 <hr>
 
@@ -12,7 +12,7 @@ Bilginin Alındığı Sayfa : www.tcmb.gov.tr -  http://www.tcmb.gov.tr/kurlar/t
 
 https://dovizkurlari-l6vtviaacq-uc.a.run.app/api/doviz/usd
 
-https://dovizkurlari-l6vtviaacq-uc.a.run.app/api/doviz/
+https://dovizkurlari-l6vtviaacq-uc.a.run.app/api/doviz
 
 https://dovizkurlari-l6vtviaacq-uc.a.run.app/api/doviz/2020/04/01
 
